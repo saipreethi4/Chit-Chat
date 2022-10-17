@@ -1,0 +1,43 @@
+.topBox {
+  background-color: white;
+  /* color: white; */
+  height: 100px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid red;
+  margin: auto;
+}
+.bottomBox {
+  background-color: white;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid red;
+  margin: 20px auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 6%;
+}
+.box {
+  padding: 10px;
+}
+.button {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.chitChat {
+  padding-right: 50px;
+}
+.red {
+  color: red;
+}
