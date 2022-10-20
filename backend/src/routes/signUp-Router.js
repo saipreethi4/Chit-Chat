@@ -17,12 +17,13 @@ signUpRouter.post("/", (req, res) => {
     .then((data) => {
       if (data.length !== 0 && data.code != 11000) {
         res.status(200).send(user);
-        return { message: "Successfully added new user" };
+        return { success: true, message: "Successfully added new user" };
       }
     })
     .catch((err) => {
       if (err.code == 11000) {
-        res.status(401).send({ message: "User Name already used" });
+        res.status(401).send();
+        return { success: false, message: "User Name already used" };
       }
     });
 });

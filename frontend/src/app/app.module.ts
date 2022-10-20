@@ -10,7 +10,12 @@ import { SignupComponent } from './components/signup/signup.component';
 import { ChatPageComponent } from './components/chat-page/chat-page.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignupComponent, ChatPageComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignupComponent,
+    ChatPageComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

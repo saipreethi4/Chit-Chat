@@ -21,7 +21,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {}
   onSignup() {
-    // console.log(this.signupData);
+    console.log(this.signupData);
     this.signupService.signup(this.signupData).subscribe(
       (d) => {
         console.log(d);
@@ -32,6 +32,11 @@ export class SignupComponent implements OnInit {
         this.err = error.statusText;
         console.log(this.err);
         this.errormsg = 'User Name Already taken';
+        const element = document.createElement('div');
+        element.innerHTML = this.errormsg;
+        element.style.color = 'red';
+        document.getElementById('userError')?.append(element);
+        alert(this.errormsg + ' ,' + 'Try with different User Name');
       }
     );
   }

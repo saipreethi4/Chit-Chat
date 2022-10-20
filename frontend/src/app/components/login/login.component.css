@@ -1,43 +1,28 @@
-.topBox {
-  background-color: white;
-  /* color: white; */
-  height: 100px;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid red;
-  margin: auto;
-}
-.bottomBox {
-  background-color: white;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid red;
-  margin: 20px auto;
+.main-section {
+  margin: 0 auto;
+  margin-top: 100px;
+  /* margin-left: 30px; */
+  padding: 0;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 6%;
+.modal-content {
+  background-color: rgb(2, 2, 2);
+  opacity: 0.75;
+  padding: 0 18px;
+  margin-top: 115px;
 }
-.box {
-  padding: 10px;
+
+.user-img {
+  margin-top: -50px;
+  margin-bottom: 35px;
 }
-.button {
-  padding: 10px;
-  display: flex;
-  justify-content: center;
+
+.user-img img {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
 }
-.chitChat {
-  padding-right: 50px;
-}
-.red {
-  color: red;
+
+button {
+  margin: 5px 0 25px;
 }

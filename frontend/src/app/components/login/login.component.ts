@@ -17,7 +17,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
   onLogin() {
     // console.log(this.loginData);
-    this.loginService.login(this.loginData);
-    this.router.navigate(['/chatpage']);
+    this.loginService.login(this.loginData).subscribe(
+      (res: any) => {
+        this.router.navigate(['/chatpage']);
+      },
+      (err: any) => {
+        console.log(err);
+        alert(err.error.message);
+      }
+    );
   }
 }

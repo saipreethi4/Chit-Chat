@@ -11,11 +11,10 @@ export class SignupService {
   constructor(private http: HttpClient) {}
 
   signup(signupData: any) {
-    return this.http
-      .post<any>(`${serverURL}/signup`, signupData)
-      .pipe(catchError(this.errorHandler));
+    return this.http.post<any>(`${serverURL}/signup`, signupData);
+    // .pipe(catchError(this.errorHandler));
   }
-  errorHandler(error: HttpErrorResponse) {
-    return throwError(error);
-  }
+  // errorHandler(error: HttpErrorResponse) {
+  //   return throwError(error);
+  // }
 }

@@ -9,8 +9,6 @@ export class LoginService {
   constructor(private http: HttpClient) {}
 
   login(loginData: any) {
-    return this.http
-      .post(`${serverURL}`, loginData)
-      .subscribe((d) => console.log(d));
+    return this.http.post(`${serverURL}`, loginData);
   }
 }
