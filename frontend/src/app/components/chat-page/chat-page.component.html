@@ -1,10 +1,71 @@
+<mat-toolbar class="shadow" style="padding: 10px">
+  <a href="" class="mx-3"
+    ><img
+      src="../../../favicon.ico"
+      alt=""
+      style="height: 50px; width: 50px; border-radius: 50%; overflow: hidden"
+  /></a>
+  <form class="d-flex" role="search">
+    <input
+      class="form-control me-2"
+      type="search"
+      placeholder="Search User"
+      aria-label="Search"
+    />
+    <a href="#" class="align-self-center" type="submit"
+      ><i class="fa-solid fa-magnifying-glass" style="font-size: larger"></i
+    ></a>
+  </form>
+
+  <span class="example-spacer"></span>
+
+  <a type="button" class="position-relative mx-3">
+    <i class="fa-solid fa-bell" style="font-size: 30px"></i>
+    <span
+      class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+    >
+      +1
+    </span>
+  </a>
+  <div class="dropdown mx-3">
+    <a
+      href="#"
+      class="dropdown-toggle"
+      role="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      <img
+        src="../../../favicon.ico"
+        alt=""
+        style="
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin: 0 10px 0 0;
+        "
+      />
+    </a>
+    <ul class="dropdown-menu dropdown-menu-light">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li>
+        <a class="dropdown-item" href="#"
+          ><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
+
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-4">
-      <div class="user-list-card">
+    <div class="col-md-4" style="padding: 0 0 0 20px">
+      <div class="user-list-card border">
         <div style="background-color: #ededed; display: flex; padding: 10px">
           <img
-            src=""
+            src="../../../favicon.ico"
             style="
               height: 50px;
               width: 50px;
@@ -14,25 +75,38 @@
             "
             alt=""
           />
-          <a type="button" style="margin-left: auto"
+          <a
+            type="button"
+            style="margin-left: auto; font-size: larger; align-self: center"
             ><i class="fa-solid fa-ellipsis-vertical"></i
           ></a>
         </div>
-        <div class="user-card">
-          <img class="avatar" />
+        <div class="user-card border">
+          <img class="avatar" src="../../../favicon.ico" />
+          <p class="username">Sai Preethi</p>
+        </div>
+        <div class="user-card border">
+          <img class="avatar" src="../../../favicon.ico" />
           <p class="username"></p>
         </div>
       </div>
     </div>
-    <div class="col-md-8">
-      <div class="chat-container">
+    <div class="col-md-8" style="padding: 0 20px 0 0">
+      <div class="chat-container border">
         <ng-container>
           <div class="chat-header">
-            <img class="avatar" />
+            <img class="avatar" src="../../../favicon.ico" />
             <p class="username"></p>
           </div>
 
-          <div class="chat-body">
+          <div
+            class="chat-body"
+            style="
+              background-image: url(../../../assets/images/chatbg.jpg);
+              background-size: contain;
+              background-repeat: repeat;
+            "
+          >
             <div>
               <p class="message-container"></p>
             </div>
@@ -40,7 +114,7 @@
 
           <div class="chat-footer">
             <div class="row">
-              <div class="col-md-10">
+              <div class="col-lg-10 col-md-6 col-sm-4 align-self-center">
                 <div class="form-group mb-0">
                   <input
                     type="text"
@@ -50,14 +124,16 @@
                 </div>
               </div>
 
-              <div class="col-md-2 text-center align-self-center">
+              <div
+                class="col-lg-2 col-md-6 col-sm-6 text-center d-flex align-self-center"
+              >
                 <a
                   type="button"
                   style="padding: 10px; margin-right: 10px; font-size: larger"
                   ><i class="fa-regular fa-image"></i
                 ></a>
                 <button
-                  class="btn btn-primary btn-sm px-3"
+                  class="btn btn-primary btn-sm"
                   style="border-radius: 10px"
                 >
                   Send
@@ -70,27 +146,3 @@
     </div>
   </div>
 </div>
-
-<!-- <ng-template #popup let-d="dismiss">
-  <div class="modal-header">
-    <h4 class="modal-title">Login</h4>
-  </div>
-
-  <div class="modal-body">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <input
-            type="number"
-            placeholder="Enter your phone number"
-            class="form-control"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal-footer">
-    <button class="btn btn-sm btn-primary">Login</button>
-  </div>
-</ng-template> -->
